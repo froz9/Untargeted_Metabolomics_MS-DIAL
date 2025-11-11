@@ -283,14 +283,13 @@ Double-click the file inside to load all your data at once.
 <img width="643" height="399" alt="Screenshot 2025-11-10 224843" src="https://github.com/user-attachments/assets/91e6e4f1-2a3c-4a51-af2b-8342fff145b0" />
 
 
-### Exporting for downstream processing and analysis
+## Exporting for downstream processing and analysis
 
 There are a few valuable things we can routinely export:
 
-- The raw data height matrix (contains all of our intensity values and feature information).
-- Analysis parameters (to streamline future analysis set-up).
+- The raw data area matrix (contains all of our intensity values and feature information).
+- MGF file (to use it inside GNPS and SIRIUS).
 
-For consistency and easy import into R, best practice is to save the height matrix output in `.csv` format.
 
 #### Height table export
 
