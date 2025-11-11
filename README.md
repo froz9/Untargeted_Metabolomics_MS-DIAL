@@ -187,15 +187,14 @@ Click `Next` once complete.
 ### Peak detection
 
 Next, set the **`Minimum peak height`** threshold based on the value obtained from the [**RawDataViewer**](#determine-peak-height-and-MS/MS-cutoff) tool. Remember, MS-DIAL will not retain those peaks below this threshold.
-A value of `100,000` is recommended for data acquired by Thermo Fisher Scientific machines.
-However, this will vary by apparatus and may require data-dependent tuning.
+For this example, a value of `524268` is the starting point. However, this will vary by your samples and may require data-dependent tuning.
 
-We will leave the `'Mass slice width'` value to the default, along with all options in the drop-down `'Advanced'` menu.
+Set the `'Mass slice width'` value to the default, along with all options in the drop-down `'Advanced'` menu.
 
-|                     | Metabolomics | Lipidomics |
-|---------------------|--------------|------------|
-| Minimum peak height | 100000       | 100000     |
-| Mass slice width    | 0.05 Da      | 0.05 Da    |
+|                     | Metabolomics |
+|---------------------|--------------|
+| Minimum peak height | 100000       |
+| Mass slice width    | 0.05 Da      |
 
 
 
