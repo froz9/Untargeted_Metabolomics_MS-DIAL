@@ -129,3 +129,50 @@ Firstly, you can define a project name. It is recommended that you change the de
 <img width="644" height="402" alt="Screenshot 2025-11-10 213353" src="https://github.com/user-attachments/assets/06861aa1-2a0a-4685-ada5-e96c32cd50bb" />
 
 13. Click `Next` once complete.
+
+## Analysis parameter settings
+
+### Data collection
+
+_If you have a parameter configuration file, you can load it in via the `Load parameter` button in the bottom-left of the window._
+
+We begin setting analysis parameters by entering the data collection parameters.
+
+**Mass Accuracy:**
+
+|               | Metabolomics |
+|---------------|--------------|
+| MS1 tolerance | 0.01 Da      |
+| MS2 tolerance | 0.025 Da     |
+
+- Justification for the MS1 Tolerance: The Q Exactive Plus instrument consistently provides precursor mass accuracy of less than 3 ppm. Setting a tight tolerance here is essential to leverage this capability. A window of **0.01 Da** is narrow enough to specifically exclude the vast majority of incorrect candidates from even being considered for an MS/MS match.
+- Justification for the MS2 Tolerance: This value (**0.025 Da**) is recommended in the official MS-DIAL tutorials and represents an ideal balance for Orbitrap MS/MS data. While still highly accurate, MS/MS scans can have slightly lower mass precision than MS1 scans due to lower ion statistics for individual fragments.
+
+**Data collection parameters:**
+
+|                        | Metabolomics |
+|------------------------|--------------|
+| Retention time begin   | 0 min        |
+| Retention time end     | 100 min      |
+| MS1 mass range begin   | 0 Da         |
+| MS1 mass range end     | 0000 Da      |
+| MS/MS mass range begin | 0 Da         |
+| MS/MS mass range end   | 2000 Da      |
+| Execute retention time correction | FALSE||
+
+*You can choose here to perform retention time correction. This should be set to FALSE otherwise, and set to FALSE if you do not have information about the analytical order of your samples.*
+
+**Isotope recognition:**
+
+|                             | Metabolomics | Lipidomics |
+|-----------------------------|--------------|------------|
+| Maximum charged number      | 2            | 2          |
+| Consider Cl and Br elements | FALSE        | FALSE      |
+
+**Multithreading (will depend on your machine):**
+
+|                                    | Metabolomics | Lipidomics |
+|------------------------------------|--------------|------------|
+| Number of threads                  | 8            | 8          |
+| Execute retention time corrections | FALSE        | FALSE      |
+
