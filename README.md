@@ -142,11 +142,11 @@ We begin setting analysis parameters by entering the data collection parameters.
 
 |               | Metabolomics |
 |---------------|--------------|
-| MS1 tolerance | 0.01 Da      |
-| MS2 tolerance | 0.025 Da     |
+| MS1 tolerance | 0.005 Da     |
+| MS2 tolerance | 0.01 Da      |
 
-- Justification for the MS1 Tolerance: The Q Exactive Plus instrument consistently provides precursor mass accuracy of less than 3 ppm. Setting a tight tolerance here is essential to leverage this capability. A window of **0.01 Da** is narrow enough to specifically exclude the vast majority of incorrect candidates from even being considered for an MS/MS match.
-- Justification for the MS2 Tolerance: This value (**0.025 Da**) is recommended in the official MS-DIAL tutorials and represents an ideal balance for Orbitrap MS/MS data. While still highly accurate, MS/MS scans can have slightly lower mass precision than MS1 scans due to lower ion statistics for individual fragments.
+- Justification for the MS1 Tolerance: Setting the tolerance to **0.005 Da** provides a stringent window that fully leverages the instrument's high accuracy. It is narrow enough to prevent the incorrect merging of near-isobaric species. Still, it gives just enough leeway to account for minor, unavoidable mass fluctuations during a chromatographic run.
+- Justification for the MS2 Tolerance: A tolerance of **0.01 Da** provides a robust window that is wide enough to capture all true fragment ions for successful deconvolution and library matching, even if their measured mass deviates slightly.
 
 **Data collection parameters:**
 
@@ -186,15 +186,31 @@ Click `Next` once complete.
 
 ### Peak detection
 
-Next, set the **`Minimum peak height`** threshold based on the value obtained from the [**RawDataViewer**](#determine-peak-height-and-MS/MS-cutoff) tool. Remember, MS-DIAL will not retain those peaks below this threshold.
-For this example, a value of `524268` is the starting point. However, this will vary by your samples and may require data-dependent tuning.
+Next, set the **`Minimum peak height`** threshold based on the value obtained from the [**RawDataViewer**](#determine-peak-height-and-MS/MS-cutoff) tool (Step 9). Remember, MS-DIAL will not retain those peaks below this threshold.
+For this example, a value of `524288` is the starting point. However, this will vary by your samples and may require data-dependent tuning.
 
 Set the `'Mass slice width'` value to the default, along with all options in the drop-down `'Advanced'` menu.
 
 |                     | Metabolomics |
 |---------------------|--------------|
-| Minimum peak height | 100000       |
+| Minimum peak height | 524288       |
 | Mass slice width    | 0.05 Da      |
 
+For Orbitrap instruments, the recommended `Mass slice width` is 0.05 Da. This is narrow enough to resolve near-isobaric species and fully leverage the instrument's high-resolution capabilities.
 
+<img width="647" height="406" alt="Screenshot 2025-11-10 220931" src="https://github.com/user-attachments/assets/b3a51008-c63c-4fd5-bd17-4c76e72d6017" />
+
+### Spectrum deconvolution
+
+The majority of the default values are suitable except the `MS/MS abundance cut off`. Set the value based on what you obtained from the [**RawDataViewer**](#determine-peak-height-and-MS/MS-cutoff) tool (Step 12).
+For this example, a value of `524288` is the starting point. However, this will vary by your samples and may require data-dependent tuning.
+
+|                                   | Metabolomics |
+|-----------------------------------|--------------|
+| Sigma window value                | 0.5          |
+| MS/MS abundance cut off           | 0            |
+| MS/MS relative abundance cut off  | 0            |
+| Exclude after precursor ion       | TRUE         |
+| Keep the isotopic ions until      | 5 Da         | 
+| Keep the isotopic ions w/o MS2Dec | FALSE        |
 
