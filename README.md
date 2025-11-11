@@ -41,21 +41,40 @@ The instructions given here are for MS-DIAL version 5.
 ### Determine peak height and MS/MS cutoff
 
 1. Start by opening the **RawDataViewer** tool. This step is essential to filter out background noise.
+
 <img width="560" height="313" alt="Screenshot 2025-11-10 201753" src="https://github.com/user-attachments/assets/4170f0e5-2ff4-4c78-89f7-2cc0b6d61b95" />
 
 2. A window will open; here, you have to set the path to your raw files. Click the Browse button to select the location of your files.
+
 <img width="455" height="293" alt="Screenshot 2025-11-10 202032" src="https://github.com/user-attachments/assets/94eb84fd-7c81-4817-9fb8-12d18137ea09" />
 
 3. Here you can select one file at a time. Once you have chosen the correct path for your files, select the ionization mode for your analysis (Positive or Negative).
 
-4. Push the load button to load the file into the program.
+4. Push the Load button to load the file into the program.
 
 5. After loading, you need to left-click the file to ensure it opens (the file will have a blue shadow).
+
 <img width="393" height="93" alt="Screenshot 2025-11-10 202431" src="https://github.com/user-attachments/assets/a53db900-18fc-4e99-aa19-ad8ee1cf629d" />
 
-6. Click the Show button
-7. 
-8. 
+6. Click the Show button.
+
+7. A new window will open where you can see three main windows, a histogram of peak height, MS, and MS/MS peak intensity information. This window also provides a table with details such as scan start time, polarity, MS levels, base peak m/z, and base peak intensity for each metabolite in your sample.
+
+<img width="595" height="400" alt="Screenshot 2025-11-10 202920" src="https://github.com/user-attachments/assets/0da82d5f-d6f4-484f-89f1-5275a4078534" />
+
+9. First, we need to watch the Histogram of peak height. The histogram illustrates how peaks are distributed across different peak height cut-offs, helping you identify the transition from noise to meaningful peaks. Peaks on the left side of the graph, often highlighted in blue, generally represent noise associated with a lower peak threshold. In contrast, the peaks on the right, highlighted in red, are more reliable and correspond to a higher threshold.
+
+<img width="961" height="605" alt="Screenshot 2025-11-10 203509" src="https://github.com/user-attachments/assets/b19da03c-0571-46cd-9a29-047f12e1a0c3" />
+
+The peak height indicated by the arrow could be a good starting point for the **Peak Height** field in MS-DIAL.
+
+12. Something similar occurs for the Histogram of the MS2 spectrum intensity. These are the significant features marked in red.
+
+<img width="460" height="135" alt="Screenshot 2025-11-10 203807" src="https://github.com/user-attachments/assets/272a026e-aabf-4d3c-9327-a8b5dfdf5632" />
+
+
+13.  
+14. 
 
 ### Start up a project
 
