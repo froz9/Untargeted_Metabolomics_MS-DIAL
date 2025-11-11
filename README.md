@@ -104,7 +104,7 @@ Equally, the red arrow indicates the higher-numbered counts in that spectrum int
 
 <img width="802" height="398" alt="Screenshot 2025-11-10 211245" src="https://github.com/user-attachments/assets/afab4958-0058-45bd-91f8-df6a7469840d" />
 
-7. It is important to set the Acquisition type based on your data characteristics, for the `**Microbial Natural Products Research Lab Chemistry Faculty, UNAM**`. The data was acquired in DIA mode, so click the `DDA` button to display the list of options, then select AIF.
+7. It is important to set the Acquisition type based on your data characteristics, for the **`Microbial Natural Products Research Lab Chemistry Faculty, UNAM`**. The data was acquired in DIA mode, so click the `DDA` button to display the list of options, then select AIF.
 8. Click the `Set to all` button.
 
 <img width="804" height="400" alt="Screenshot 2025-11-10 212202" src="https://github.com/user-attachments/assets/4e90e93f-3398-4372-953b-8a0fd5d25f37" />
@@ -124,5 +124,8 @@ Firstly, you can define a project name. It is recommended that you change the de
 - Data type for both `MS1` and `MS2` should be set to `Centroid data` for our data, acquired using a Q-Exactive LC-MS/MS apparatus.
 - Ensure you choose the correct `'Ion mode'` at the bottom left, either positive or negative ionisation. And that you select the correct `'Target omics'` from either metabolomics or lipidomics.
 
-12. For the `**Microbial Natural Products Research Lab Chemistry Faculty, UNAM**`, your window needs to look like this
-12. Click `Next` once complete.
+12. For the **`Microbial Natural Products Research Lab Chemistry Faculty, UNAM`**, your window needs to look like this:
+
+<img width="644" height="402" alt="Screenshot 2025-11-10 213353" src="https://github.com/user-attachments/assets/06861aa1-2a0a-4685-ada5-e96c32cd50bb" />
+
+13. Click `Next` once complete.
