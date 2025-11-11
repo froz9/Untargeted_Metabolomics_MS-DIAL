@@ -162,7 +162,7 @@ These parameters are displayed if you click the `Advanced` button. **For our pur
 | MS/MS mass range end   | 2000 Da      |
 | Execute retention time correction | FALSE||
 
-*You can choose here to perform retention time correction. This should be set to FALSE otherwise, and set to FALSE if you do not have information about the analytical order of your samples.*
+*You can choose here to perform retention time correction. This value should be set to FALSE otherwise, and set to FALSE if you do not have information about the analytical order of your samples.*
 
 **Isotope recognition:**
 
@@ -196,21 +196,111 @@ Set the `'Mass slice width'` value to the default, along with all options in the
 | Minimum peak height | 524288       |
 | Mass slice width    | 0.05 Da      |
 
-For Orbitrap instruments, the recommended `Mass slice width` is 0.05 Da. This is narrow enough to resolve near-isobaric species and fully leverage the instrument's high-resolution capabilities.
+For Orbitrap instruments, the recommended `Mass slice width` is 0.05 Da. This value is narrow enough to resolve near-isobaric species and fully leverage the instrument's high-resolution capabilities. This contrasts with the more widely recommended value of 0.1 Da for lower-resolution instruments like Q-TOFs, highlighting the importance of tailoring this parameter to your specific hardware.
 
 <img width="647" height="406" alt="Screenshot 2025-11-10 220931" src="https://github.com/user-attachments/assets/b3a51008-c63c-4fd5-bd17-4c76e72d6017" />
 
 ### Spectrum deconvolution
 
 The majority of the default values are suitable except the `MS/MS abundance cut off`. Set the value based on what you obtained from the [**RawDataViewer**](#determine-peak-height-and-MS/MS-cutoff) tool (Step 12).
-For this example, a value of `524288` is the starting point. However, this will vary by your samples and may require data-dependent tuning.
+For this example, a value of `16384` is the starting point. However, this will vary by your samples and may require data-dependent tuning.
 
 |                                   | Metabolomics |
 |-----------------------------------|--------------|
 | Sigma window value                | 0.5          |
-| MS/MS abundance cut off           | 0            |
+| MS/MS abundance cut off           | 16384        |
 | MS/MS relative abundance cut off  | 0            |
 | Exclude after precursor ion       | TRUE         |
 | Keep the isotopic ions until      | 5 Da         | 
 | Keep the isotopic ions w/o MS2Dec | FALSE        |
+| Run RT deconvolution              | TRUE         |
 
+Click `Next` once complete.
+
+<img width="644" height="400" alt="Screenshot 2025-11-10 221748" src="https://github.com/user-attachments/assets/690add07-7f1d-46b6-8779-a43691e97bcc" />
+
+### Identification
+
+In this tab, you can add your databases as appropriate. **For our purposes, we won't use this module.**
+
+Click `Next` once.
+
+### Adduct ion
+
+Here you can select the appropriate adduct ion settings for your runs. **For our purposes, we won't use this module.**
+
+Click `Next` once.
+
+### Alignment parameters
+
+Here, you should rename the `'Result name:'` to something more recognisable.
+For example, `alignment_data_sampletype_ionisation`.
+
+Set the `'Reference file:'` to your **sample** in the case that you have only one injection (the case of **`Microbial Natural Products Research Lab Chemistry Faculty, UNAM`**) or to the **second** QC sample. The first QC sample is typically different from the others, which will affect your results. **Avoid selecting any blank sample as the `Reference file`**
+
+The `'Retention time tolerance:'` parameter will be data-dependent; however, a good starting point is `0.1 min` based on manual validation of the data acquired for the **`Microbial Natural Products Research Lab Chemistry Faculty, UNAM`**.
+Justification: Modern UHPLC systems are highly stable and reproducible. Even over a long batch of samples, the retention time for a given compound should not drift by more than a few seconds.
+
+The `MS1 Tolerance` is the mass-to-charge (*m/z*) window used to match peaks across different files during alignment.
+Justification: This tolerance should be set slightly wider than the MS1 tolerance used for initial peak detection (0.005 Da).
+
+|                          | Metabolomics |
+|--------------------------|--------------|
+| Retention time tolerance | 0.1 min      |
+| MS1 tolerance            | 0.01 Da     |
+
+
+There are also some other parameters we need to check in the `'Advanced'` drop-down menu.
+It is mandatory to remove features based on blank information. When we check the `Remove features based on blank information`, the following three tick boxes change from 'greyed out' to 'greyed in' and can be changed. Set the `Sample max/blank average` `fold change` to five.
+
+We will use `Gap filling by compulsion`, as it improves peak alignment (often resulting in fewer highly similar features).
+
+|                                                | Metabolomics |
+|------------------------------------------------|--------------|
+| Retention time factor                          | 0.5          |
+| MS1 factor                                     | 0.5          |
+| Peak count filter                              | 0 %          |
+| N% detected in at least one group              | 0 %          |
+| Remove features based on blank information     | TRUE         | 
+| Sample max / blank average                     | 5            |
+| Keep 'reference matched' metabolite features   | FALSE        |
+| Keep 'suggested (w/o MS2)' metabolite features | FALSE        |
+| Keep removable features and assign the tag     | FALSE        |
+| Gap filling by compulsion                      | TRUE         |
+| Do alignment for ref. matched peaks only        | FALSE        | 
+
+<img width="650" height="400" alt="Screenshot 2025-11-10 224234" src="https://github.com/user-attachments/assets/c6a4c7b2-ed9a-48b0-a09d-2d3924ca2423" />
+
+### Run the pipeline
+
+Once you have finished setting up the analysis parameters, click `'Run'` to start the analysis.
+
+<img width="495" height="300" alt="Screenshot 2025-11-10 224655" src="https://github.com/user-attachments/assets/224e77b0-1dec-4c7f-bf1e-29f5be6260a2" />
+
+When the run finishes, the data will appear on the screen. On the left-hand side of the screen, you will see an `'Alignment navigator'` box.
+Double-click the file inside to load all your data at once.
+
+<img width="643" height="399" alt="Screenshot 2025-11-10 224843" src="https://github.com/user-attachments/assets/91e6e4f1-2a3c-4a51-af2b-8342fff145b0" />
+
+
+### Exporting for downstream processing and analysis
+
+There are a few valuable things we can routinely export:
+
+- The raw data height matrix (contains all of our intensity values and feature information).
+- Analysis parameters (to streamline future analysis set-up).
+
+For consistency and easy import into R, best practice is to save the height matrix output in `.csv` format.
+
+#### Height table export
+
+Navigate to the `Export` tab and click the `Alignment result` button.
+
+<img width="640" height="400" alt="Screenshot 2025-11-10 225235" src="https://github.com/user-attachments/assets/ac057c9c-ee17-4326-90ae-8c54f75492d2" />
+
+
+To export the raw height matrix table and the MGF files.
+
+Select the path for export and select only `Raw data (Area)`. Click the GNPS tab to develop the drop-down menu and select the `GNPS(MS-DIAL4 format)`. Finally, click `'Export'`.
+
+<img width="441" height="686" alt="Screenshot 2025-11-10 225805" src="https://github.com/user-attachments/assets/170d62e0-0376-4df9-99e8-37e5b412106d" />
