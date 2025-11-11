@@ -186,7 +186,7 @@ Click `Next` once complete.
 
 ### Peak detection
 
-Next, set the **`Minimum peak height`** threshold based on the value obtained from the [**RawDataViewer**](### Determine peak height and MS/MS cutoff) tool. Remember, MS-DIAL will not retain those peaks below this threshold.
+Next, set the **`Minimum peak height`** threshold based on the value obtained from the [**RawDataViewer**](#determine-peak-height-and-MS/MS-cutoff) tool. Remember, MS-DIAL will not retain those peaks below this threshold.
 A value of `100,000` is recommended for data acquired by Thermo Fisher Scientific machines.
 However, this will vary by apparatus and may require data-dependent tuning.
 
@@ -197,30 +197,5 @@ We will leave the `'Mass slice width'` value to the default, along with all opti
 | Minimum peak height | 100000       | 100000     |
 | Mass slice width    | 0.05 Da      | 0.05 Da    |
 
-
-# Example headings
-
-## Sample Section
-
-## This'll be a _Helpful_ Section About the Greek Letter Θ!
-A heading containing characters not allowed in fragments, UTF-8 characters, two consecutive spaces between the first and second words, and formatting.
-
-## This heading is not unique in the file
-
-TEXT 1
-
-## This heading is not unique in the file
-
-TEXT 2
-
-# Links to the example headings above
-
-Link to the sample section: [Link Text](#sample-section).
-
-Link to the helpful section: [Link Text](#thisll-be-a-helpful-section-about-the-greek-letter-Θ).
-
-Link to the first non-unique section: [Link Text](#this-heading-is-not-unique-in-the-file).
-
-Link to the second non-unique section: [Link Text](#this-heading-is-not-unique-in-the-file-1).
 
 
