@@ -66,15 +66,17 @@ The instructions given here are for MS-DIAL version 5.
 
 <img width="961" height="605" alt="Screenshot 2025-11-10 203509" src="https://github.com/user-attachments/assets/b19da03c-0571-46cd-9a29-047f12e1a0c3" />
 
-The peak height indicated by the arrow could be a good starting point for the **Peak Height** field in MS-DIAL.
+The peak height indicated by the arrow corresponds to the higher-numbered peak and could be a good starting point for the **Peak Height** field in MS-DIAL.
 
 12. Something similar occurs for the Histogram of the MS2 spectrum intensity. These are the significant features marked in red.
 
 <img width="460" height="135" alt="Screenshot 2025-11-10 203807" src="https://github.com/user-attachments/assets/272a026e-aabf-4d3c-9327-a8b5dfdf5632" />
 
+Equally, the red arrow indicates the higg-numbered counts in that spectrum intensity and could be a good starting point for the **MS/MS abundance cut off** field in MS-DIAL.
 
-13.  
-14. 
+13.  Once you have selected the proper number for the **Peak Height** and **MS/MS abundance cut off**, you can close the RawDataViewer tool.
+
+14. **Important**: Determine the Peak height and MS/MS abundance cut-off only for your samples or QCs, not for your blanks.
 
 ### Start up a project
 
