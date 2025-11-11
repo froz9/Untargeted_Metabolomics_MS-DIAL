@@ -41,8 +41,21 @@ The instructions given here are for MS-DIAL version 5.
 ### Determine peak height and MS/MS cutoff
 
 1. Start by opening the **RawDataViewer** tool. This step is essential to filter out background noise.
-<img width="1120" height="626" alt="Screenshot 2025-11-10 201753" src="https://github.com/user-attachments/assets/4170f0e5-2ff4-4c78-89f7-2cc0b6d61b95" />
+<img width="560" height="313" alt="Screenshot 2025-11-10 201753" src="https://github.com/user-attachments/assets/4170f0e5-2ff4-4c78-89f7-2cc0b6d61b95" />
 
+2. A window will open; here, you have to set the path to your raw files. Click the Browse button to select the location of your files.
+<img width="455" height="293" alt="Screenshot 2025-11-10 202032" src="https://github.com/user-attachments/assets/94eb84fd-7c81-4817-9fb8-12d18137ea09" />
+
+3. Here you can select one file at a time. Once you have chosen the correct path for your files, select the ionization mode for your analysis (Positive or Negative).
+
+4. Push the load button to load the file into the program.
+
+5. After loading, you need to left-click the file to ensure it opens (the file will have a blue shadow).
+<img width="393" height="93" alt="Screenshot 2025-11-10 202431" src="https://github.com/user-attachments/assets/a53db900-18fc-4e99-aa19-ad8ee1cf629d" />
+
+6. Click the Show button
+7. 
+8. 
 
 ### Start up a project
 
