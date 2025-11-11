@@ -104,5 +104,11 @@ Equally, the red arrow indicates the higher-numbered counts in that spectrum int
 
 <img width="802" height="398" alt="Screenshot 2025-11-10 211245" src="https://github.com/user-attachments/assets/afab4958-0058-45bd-91f8-df6a7469840d" />
 
-7. Once you have finished, click `'Next'` to continue.
+7. It is important to set the Acquisition type based on your data characteristics, for the `Microbial Natural Products Research Lab` Chemistry Faculty, UNAM. The data was acquired in DIA mode, so click the `DDA` button to display the list of options, then select AIF.
+8. Click the `Set to all` button.
 
+<img width="804" height="199" alt="Screenshot 2025-11-10 212202" src="https://github.com/user-attachments/assets/4e90e93f-3398-4372-953b-8a0fd5d25f37" />
+
+10. Once you have finished, click `'Next'` to continue.
+
+<img width="796" height="399" alt="Screenshot 2025-11-10 212314" src="https://github.com/user-attachments/assets/c58e7d6a-8510-4f5d-8cd1-ac024365b65d" />
