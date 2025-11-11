@@ -19,7 +19,7 @@ It's the heavier version.
 
 **2. After downloading, you need to decompress the ZIP file.**
 
-<img width="1139" height="713" alt="Screenshot 2025-11-10 195928" src="https://github.com/user-attachments/assets/480e10e4-a3bc-450d-a633-41a80a76fd7e" />
+<img width="570" height="357" alt="Screenshot 2025-11-10 195928" src="https://github.com/user-attachments/assets/480e10e4-a3bc-450d-a633-41a80a76fd7e" />
 
 
 **3. Also, you need to have all your LC-MS/MS files in a single folder.**
