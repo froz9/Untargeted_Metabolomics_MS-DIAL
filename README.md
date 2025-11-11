@@ -104,7 +104,7 @@ Equally, the red arrow indicates the higher-numbered counts in that spectrum int
 
 <img width="802" height="398" alt="Screenshot 2025-11-10 211245" src="https://github.com/user-attachments/assets/afab4958-0058-45bd-91f8-df6a7469840d" />
 
-7. It is important to set the Acquisition type based on your data characteristics, for the **`Microbial Natural Products Research Lab Chemistry Faculty, UNAM`**. The data was acquired in DIA mode, so click the `DDA` button to display the list of options, then select AIF.
+7. It is essential to set the Acquisition type based on your data characteristics, for the **`Microbial Natural Products Research Lab Chemistry Faculty, UNAM`**. The data was acquired in DIA mode, so click the `DDA` button to display the list of options, then select AIF.
 8. Click the `Set to all` button.
 
 <img width="804" height="400" alt="Screenshot 2025-11-10 212202" src="https://github.com/user-attachments/assets/4e90e93f-3398-4372-953b-8a0fd5d25f37" />
@@ -150,6 +150,8 @@ We begin setting analysis parameters by entering the data collection parameters.
 
 **Data collection parameters:**
 
+These parameters are displayed if you click the `Advanced` button. **For our purposes, most of the default options will be appropriate. **
+
 |                        | Metabolomics |
 |------------------------|--------------|
 | Retention time begin   | 0 min        |
@@ -164,15 +166,17 @@ We begin setting analysis parameters by entering the data collection parameters.
 
 **Isotope recognition:**
 
-|                             | Metabolomics | Lipidomics |
-|-----------------------------|--------------|------------|
-| Maximum charged number      | 2            | 2          |
-| Consider Cl and Br elements | FALSE        | FALSE      |
+|                             | Metabolomics |
+|-----------------------------|--------------|
+| Maximum charged number      | 2            |
+| Consider Cl and Br elements | FALSE        |
 
 **Multithreading (will depend on your machine):**
 
-|                                    | Metabolomics | Lipidomics |
-|------------------------------------|--------------|------------|
-| Number of threads                  | 8            | 8          |
-| Execute retention time corrections | FALSE        | FALSE      |
+If your computer is a recent model, you can select more than 4, depending on your processor.
+
+|                                    | Metabolomics |
+|------------------------------------|--------------|
+| Number of threads                  | 8            |
+
 
