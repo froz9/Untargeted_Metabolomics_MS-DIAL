@@ -168,6 +168,7 @@ These parameters are displayed if you click the `Advanced` button. **For our pur
 
 |                             | Metabolomics |
 |-----------------------------|--------------|
+| Maximum number of isotopes  | 2            |
 | Maximum charged number      | 2            |
 | Consider Cl and Br elements | FALSE        |
 
@@ -178,5 +179,24 @@ If your computer is a recent model, you can select more than 4, depending on you
 |                                    | Metabolomics |
 |------------------------------------|--------------|
 | Number of threads                  | 8            |
+
+Click `Next` once complete.
+
+<img width="643" height="401" alt="image" src="https://github.com/user-attachments/assets/06ae13aa-9a00-45c9-94aa-b9283d255877" />
+
+### Peak detection
+
+Next, set the **`Minimum peak height`** threshold based on the value obtained from the [**RawDataViewer**](### Determine peak height and MS/MS cutoff) tool. Remember, MS-DIAL will not retain those peaks below this threshold.
+A value of `100,000` is recommended for data acquired by Thermo Fisher Scientific machines.
+However, this will vary by apparatus and may require data-dependent tuning.
+
+We will leave the `'Mass slice width'` value to the default, along with all options in the drop-down `'Advanced'` menu.
+
+|                     | Metabolomics | Lipidomics |
+|---------------------|--------------|------------|
+| Minimum peak height | 100000       | 100000     |
+| Mass slice width    | 0.05 Da      | 0.05 Da    |
+
+
 
 
