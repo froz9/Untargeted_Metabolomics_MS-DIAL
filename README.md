@@ -157,7 +157,7 @@ These parameters are displayed if you click the `Advanced` button. **For our pur
 | Retention time begin   | 0 min        |
 | Retention time end     | 100 min      |
 | MS1 mass range begin   | 0 Da         |
-| MS1 mass range end     | 0000 Da      |
+| MS1 mass range end     | 2000 Da      |
 | MS/MS mass range begin | 0 Da         |
 | MS/MS mass range end   | 2000 Da      |
 | Execute retention time correction | FALSE||
